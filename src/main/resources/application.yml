@@ -1,10 +1,40 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver  # MySql jdbc Driver
-    # 连接数据库
-    # my-house表示的是你创建的数据库;
-    # characterEncoding:编码格式;
-    # serverTimezone:选择服务器时间方式;
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/my-house?characterEncoding=UTF-8&serverTimezone=UTC
-    username: root   #本地设置数据库账号
-    password: 123456 #密码
+    username: root
+    password: 123456
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+  devtools:
+    restart:
+      exclude: templates/**,static/**
+  thymeleaf:
+    cache: false
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+#logging:
+#  level:
+#    root: info
+#    org.hibernate.SQL: DEBUG
+#    #com.zaxxer.hikari: DEBUG
+#    #org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+#  path: logs/my-house/
+#  pattern:
+#    console: "%clr(%d{dd-MM-yyyy HH:mm:ss.SSS} %-5level [%thread] %logger{36}.%M - %msg%n)"
+#    file: "%d{dd-MM-yyyy HH:mm:ss.SSS} %-5level [%thread] %logger{36}.%M - %msg%n"
