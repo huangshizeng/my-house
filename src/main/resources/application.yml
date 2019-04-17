@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver  # MySql jdbc Driver
+    # 连接数据库
+    # my-house表示的是你创建的数据库;
+    # characterEncoding:编码格式;
+    # serverTimezone:选择服务器时间方式;
+    url: jdbc:mysql://127.0.0.1:3306/my-house?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root   #本地设置数据库账号
+    password: 123456 #密码
