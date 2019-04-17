@@ -463,7 +463,7 @@ body {
 }
 
 .footer {
-    background: url(/static/images/footer-bg.jpg) no-repeat center top #222;
+    background: url(/images/footer-bg.jpg) no-repeat center top #222;
     clear: both;
     /*width: 100%;*/
     height: 150px;
