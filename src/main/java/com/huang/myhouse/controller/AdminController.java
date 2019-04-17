@@ -21,4 +21,9 @@ public class AdminController {
     public String welcome() {
         return "admin/welcome";
     }
+
+    @RequestMapping("/loginPage")
+    public String loginPage() {
+        return "admin/login";
+    }
 }
