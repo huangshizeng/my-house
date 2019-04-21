@@ -22,6 +22,10 @@ spring:
       exclude: templates/**,static/**
   thymeleaf:
     cache: false
+#  servlet:
+#    multipart:
+#      max-file-size: 1Mb
+#      max-request-size: 10Mb
 
 server:
   error:
