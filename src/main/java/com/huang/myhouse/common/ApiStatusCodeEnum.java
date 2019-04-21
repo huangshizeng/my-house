@@ -6,7 +6,7 @@ package com.huang.myhouse.common;
 
 public enum ApiStatusCodeEnum {
     /* 成功状态码 */
-    SUCCESS(1, "成功"),
+    SUCCESS(200, "成功"),
 
     /* 参数错误：10001-19999 */
     PARAM_IS_INVALID(10001, "参数无效"),
@@ -55,18 +55,7 @@ public enum ApiStatusCodeEnum {
     TEMPLATE_PROJECT_BIND_DELETE_ERROR(80001, "模板与项目绑定，无法全部删除"),
     REQUEST_DATA_NOT_SUPPORT(80002, "请求数据类型不支持"),
     JSON_IS_ILLEGAL(80003, "JSON串不合法"),
-    TEMPLATE_NOT_START(80004, "模板无法启动"),
-    TEMPLATE_NOT_FOUND(80005, "没有找到对应的模版"),
-    TEMPLATE_DISABLE(80006, "此模版已被禁用"),
-    NODE_NOT_FOUND(80007, "节点不存在"),
-    ADAPTER_NOT_FOUND(80008, "适配器不存在"),
-    FRONT_MACHINE_NOT_FOUND(80009, "前置机不存在"),
-    WORKFLOW_NOT_FOUND(80010, "流程不存在"),
-    PROJECT_NOT_FOUND(80011, "项目不存在"),
     FILE_TYPE_ERROR(80012, "文件类型错误"),
-    DEPLOY_RUNNING_PERMISSION_NO_ACCESS(80013, "部署任务中不允许该操作"),
-    DEPLOY_RUNNING_EXISTING(80014, "已有相关任务部署中"),
-    DOCKER_REGISTRY_SERVER_ERROR(80015, "DOCKER版本库服务出错"),
     /**
      * 文件操作
      */
