@@ -14,27 +14,27 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests()
-                // 管理员登录入口
-                .antMatchers("/admin/login").permitAll()
-                // 静态资源
-                .antMatchers("/css/**", "/fonts/**", "/images/**", "/js/**", "/lib/**").permitAll()
-                // 用户登录入口
-                .antMatchers("/user/login").permitAll()
-                .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/user/**").hasAnyRole("ADMIN", "USER")
-                .antMatchers("/api/user/**").hasAnyRole("ADMIN", "USER")
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/admin/loginPage")
-                .permitAll()
-                .and()
-                .logout()
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/logout/page")
-                .permitAll();
+        http.csrf().disable();
+//                .authorizeRequests()
+//                // 管理员登录入口
+//                .antMatchers("/admin/login").permitAll()
+//                // 静态资源
+//                .antMatchers("/css/**", "/fonts/**", "/images/**", "/js/**", "/lib/**").permitAll()
+//                // 用户登录入口
+//                .antMatchers("/user/login").permitAll()
+//                .antMatchers("/admin/**").hasRole("ADMIN")
+//                .antMatchers("/user/**").hasAnyRole("ADMIN", "USER")
+//                .antMatchers("/api/user/**").hasAnyRole("ADMIN", "USER")
+//                .anyRequest().authenticated()
+//                .and()
+//                .formLogin()
+//                .loginPage("/admin/loginPage")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .logoutUrl("/logout")
+//                .logoutSuccessUrl("/logout/page")
+//                .permitAll();
         http.headers().frameOptions().sameOrigin();
     }
 
