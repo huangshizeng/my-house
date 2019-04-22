@@ -140,4 +140,7 @@ public class House {
      */
     @Column(name = "bathroom")
     private Integer bathroom;
+
+    @Column(name = "admin_id")
+    private Long adminId;
 }
